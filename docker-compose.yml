@@ -1,0 +1,47 @@
+version: "3.8"
+
+networks:
+  app-bubblestore-net:
+    name: app-bubblestore-net
+    driver: bridge
+  app-mockserver-net:
+    name: app-bubblestore-net
+    driver: bridge
+  database-net:
+    name: database-net
+    driver: bridge
+
+volumes:
+  bubblestore-data:
+   
+
+services:
+  app-mockserver:
+    container_name: app-mockserver
+    build: 
+      context: "./mock"
+      dockerfile: Dockerfile
+    ports:
+      - 4512:4512
+    networks:
+      - app-mockserver-net
+    volumes:
+      - bubblestore-data:/mock
+    restart: always
+
+    
+  # app-bubblestore-frontend:
+  #   container_name: app-bubblestore-frontend
+  #   build: 
+  #     context: "./frontend"
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - 8080:3000
+  #   volumes:
+  #     - bubblestore-data:/data
+  #   depends_on:
+  #     - app-mockserver
+  #   restart: always
+  #   networks:
+  #     - app-bubblestore-net
+    
