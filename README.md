@@ -13,11 +13,23 @@
 ## 🧐 About <a name = "about"></a>
 
 Bubble Store is a simple fashion store, this project is a exercise of Mindera School and the purpose of this project training 
+the knowledge.
 
-## ⛏️ Built Using <a name = "built_using"></a>
+## ⛏️ Front End - Essentials Using - Built Using <a name = "built_using"></a>
 
 - [React](https://reactjs.org/) - React JS
 - [React Router v6](https://reactrouter.com/docs/en/v6/getting-started/overview) - React Router
+
+## ⛏️ Back End -  Essentials Using - Built Using <a name = "built_using2"></a>
+
+- [Spring Web](https://spring.io/projects/spring-framework) - Spring Framework
+- [Lombook](https://projectlombok.org/) - Lombok
+
+
+## ⛏️ Production -  Essentials Using - Built Using <a name = "built_using3"></a>
+
+- [Docker](https://www.docker.com/) - Docker
+- [Docker Compose](https://docs.docker.com/compose/overview/) - Docker Compose
 
 ## ✍️ Authors <a name = "authors"></a>
 
