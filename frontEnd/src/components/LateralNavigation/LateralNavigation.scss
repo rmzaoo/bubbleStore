@@ -1,0 +1,101 @@
+.lateralNav-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.5s ease-in-out;
+
+
+  .lateralNav-close-zone {
+    width: 100%;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .lateralNav-content {
+    width: 20%;
+    background-color: rgb(31, 31, 31);
+
+    @media (max-width: 768px) {
+      background-color: rgba(31, 31, 31, 0.9);
+      width: 100%;
+    }
+
+    .lateralNav-content-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      color: rgb(255, 255, 255);
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      font-size: 20px;
+      font-weight: lighter;
+      letter-spacing: 10px;
+      text-transform: lowercase;
+
+      .lateralNav-content-close {
+        width: 35px;
+        height: 35px;
+        margin: 0 2px;
+        padding: 5px;
+        border-radius: 50%;
+        display: flex;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: rgba(255, 255, 255, 0.7);
+          cursor: pointer;
+        }
+      }
+    }
+    .lateralNav-content-body {
+      .lateralNav-category {
+        .lateralNav-category-btn {
+          width: 100%;
+          padding: 15px 0;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          font-size: 25px;
+          transition: background-color 0.3s ease-in-out;
+          letter-spacing: 8px;
+
+
+          a {
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+            margin-left: 10px;
+
+            &:hover {
+              color: rgba(255, 255, 255, 0.7);
+              cursor: pointer;
+            }
+          }
+
+          svg {
+            margin-top: 5px;
+            margin-left: 5px;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+              color: rgba(255, 255, 255, 0.7);
+              cursor: pointer;
+            }
+          }
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+          }
+        }
+      }
+    }
+  }
+}

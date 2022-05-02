@@ -1,0 +1,110 @@
+.productPage-container {
+  animation: fadeIn 2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .productPage-header {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .productPage-title {
+      font-size: 18px;
+      letter-spacing: 10px;
+
+      a {
+        padding-left: 10px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      
+      }
+    }
+  }
+
+  .productPage-filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    
+
+    .productPage-filter{
+      font-weight: bold;
+      text-transform: lowercase;
+      letter-spacing: 10px;
+      padding: 5px 5px;
+      margin: 0 5px;
+      border-radius: 15px;
+      transition: 0.4s background-color ease-in-out, 0.3s color ease-in-out,
+        border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      border: 1px solid transparent;
+      background-color: transparent;
+      color: white;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: rgba(0, 0, 0, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    svg {
+      font-size: 30px;
+    }
+
+    select {
+      font-size: 15px;
+      width: 150px;
+      text-align: center;
+
+      option {
+        color: white;
+        background-color: rgb(31, 31, 31);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .productPage-lateralNav{
+    display: none;
+  }
+
+  .lateralNav-open {
+    display: flex;
+  }
+
+  .productPage-product-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

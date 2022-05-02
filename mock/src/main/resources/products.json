@@ -1,0 +1,109 @@
+[
+  {
+    "skuid": "001",
+    "name": "T-SHIRT DE MANGA CURTA COM TEXTO",
+    "price": 9.99,
+    "description": "T-shirt básica de manga curta e mensagem no peito, decote redondo e 100% algodão.",
+    "sizeAvailable": {
+      "S": 0,
+      "M": 1,
+      "L": 1
+    },
+    "img": [
+      "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8245/515/800/8245515800_2_1_8.jpg?t=1649064074694&imwidth=1440",
+      "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8245/515/800/8245515800_2_2_8.jpg?t=1649064074694&imwidth=1440"
+    ],
+    "category": {
+      "0": "clothes",
+      "1": "t-shirt",
+      "2": "oversized"
+    },
+    "new": true
+  },
+  {
+    "skuid": "002",
+    "name": "CALÇAS DE PERNA LARGA DESBOTADAS",
+    "price": 29.99,
+    "description": "Calças de perna larga com pormenor desbotado, com design de cinco bolsos, cintura com presilhas, fecho de correr e botão.",
+    "sizeAvailable": {
+      "S": 5,
+      "M": 3,
+      "L": 12
+    },
+    "img": [
+      "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4674/931/508/09/4674931508_2_1_8.jpg?t=1646303369631&imwidth=375",
+      "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4674/931/508/09/4674931508_2_3_8.jpg?t=1646303369631&imwidth=375",
+      "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4674/931/508/09/4674931508_2_4_8.jpg?t=1646303369631&imwidth=375"
+    ],
+    "category": {
+      "0": "clothes",
+      "1": "jeans"
+    },
+    "new": true
+  },
+  {
+    "skuid": "003",
+    "name": "CAMISA COM ESTAMPADO DE PALMEIRAS AQUARELA",
+    "price": 22.99,
+    "description": "Camisa com estampado de palmeiras efeito aguarela, manga curta, fecho de botões e gola em lapela.",
+    "sizeAvailable": {
+      "S": 5,
+      "M": 0,
+      "L": 1
+    },
+    "img": [
+      "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4474/552/250/03/4474552250_2_1_8.jpg?t=1648026489299&imwidth=1440",
+      "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4474/552/250/03/4474552250_2_2_8.jpg?t=1648026489299&imwidth=1440",
+      "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4474/552/250/03/4474552250_2_3_8.jpg?t=1648026489299&imwidth=1440"
+    ],
+    "category": {
+      "0": "clothes",
+      "1": "shirt",
+      "2": "short sleeve"
+    },
+    "new": false
+  },
+  {
+    "skuid": "004",
+    "name": "SAPATILHAS CASUAIS EM CONTRASTE",
+    "price": 25.99,
+    "description": "Sapatilhas disponíveis em várias cores. Fecho com cordões. Altura da sola de 3 cm.",
+    "sizeAvailable": {
+      "41": 0,
+      "42": 0,
+      "43": 0,
+      "44": 1
+    },
+    "img": [
+      "https://static.pullandbear.net/2/photos//2022/V/1/2/p/2218/940/011/01/2218940011_2_1_8.jpg?t=1648141714977&imwidth=1440",
+      "https://static.pullandbear.net/2/photos//2022/V/1/2/p/2218/940/011/01/2218940011_2_2_8.jpg?t=1648141714977&imwidth=1440",
+      "https://static.pullandbear.net/2/photos//2022/V/1/2/p/2218/940/011/01/2218940011_2_3_8.jpg?t=1648141714977&imwidth=1440",
+      "https://static.pullandbear.net/2/photos//2022/V/1/2/p/2218/940/011/01/2218940011_2_4_8.jpg?t=1648141714977&imwidth=1440"
+    ],
+    "category": {
+      "0": "shoes",
+      "1": "casual"
+    },
+    "new": true
+  },
+  {
+    "skuid": "005",
+    "name": "BONÉ PRETO COM MENSAGEM BORDADA",
+    "price": 9.99,
+    "description": "Boné de cor preta com mensagem bordada no painel à frente, viseira curva e fecho atrás ajustável.",
+    "sizeAvailable": {
+      "M": 1
+    },
+    "img": [
+      "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4829/521/800/4829521800_2_1_8.jpg?t=1647872444970&imwidth=1440",
+      "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4829/521/800/4829521800_2_2_8.jpg?t=1647872444970&imwidth=1440",
+      "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4829/521/800/4829521800_2_3_8.jpg?t=1647872444970&imwidth=1440",
+      "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4829/521/800/4829521800_2_4_8.jpg?t=1647872444970&imwidth=1440"
+    ],
+    "category": {
+      "0": "acessories",
+      "1": "hat"
+    },
+    "new": true
+  }
+]

@@ -1,0 +1,112 @@
+.navbar-input-container {
+  .navbar-input {
+    input {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #fff;
+      color: white;
+      padding: 5px 0;
+      margin: 5px;
+      width: 200px;
+      height: 50%;
+      font-size: 25px;
+      transition: color 0.3s ease-in-out, width 0.3s ease-in-out;
+
+      &:focus {
+        outline: none;
+        color: rgba(245, 245, 245, 0.5);
+        width: 500px;
+
+        @media (max-width: 768px) {
+          width: 200px;
+        }
+      }
+      &:hover {
+        outline: none;
+        color: rgba(245, 245, 245, 0.5);
+        width: 500px;
+        @media (max-width: 768px) {
+          width: 200px;
+        }
+      }
+    }
+
+    .input-primary-extended {
+      width: 500px;
+      @media (max-width: 768px) {
+        width: 200px;
+      }
+    }
+  }
+
+  .navbar-input-dataresults {
+    // display: none;
+    position: fixed;
+    background-color: rgba(32, 32, 32, 0.8);
+    width: 500px;
+    margin: 5px;
+    border-radius: 5px;
+    overflow-y: auto;
+    max-height: 250px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      left: 0;
+      margin: 5px 0;
+      background-color: rgba(32, 32, 32, 0.9);
+    }
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      background-color: #616161;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #f5f5f5;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #616161;
+    }
+
+    .navbar-input-dataresults-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 20px 0;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      max-height: 100px;
+      color: white;
+
+      .navbar-input-dataresults-item-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        padding: 0 10px;
+      }
+
+      img {
+        width: 80px;
+        height: 100%;
+        border-radius: 0px 13px 0px 13px;
+        margin: 0 10px 0 25px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      span {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      &:hover {
+        color: black;
+        background-color: rgba(255, 255, 255, 0.9);
+        cursor: pointer;
+      }
+    }
+  }
+}
