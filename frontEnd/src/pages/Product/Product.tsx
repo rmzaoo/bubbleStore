@@ -13,7 +13,7 @@ const Product = () => {
   const [selectedSize, setSelectedSize] = useState("null");
   const [product, setProduct] = useState({});
   let productImages: HTMLElement | null = null;
-  const [showSomething, setShowSomething] = useState(false)
+  const [showSomething, setShowSomething] = useState(false);
 
   useEffect(() => {
     if (productId) {
@@ -22,19 +22,19 @@ const Product = () => {
     }
   }, [productId]);
 
-  console.log(product)
+  console.log(product);
 
   useLayoutEffect(() => {
     setTimeout(() => {
-      productImages = document.getElementById("product-images") ;
+      productImages = document.getElementById("product-images");
       // console.log(productImages)
       // console.log(productImages?.scrollWidth, productImages?.clientWidth)
-      if(productImages?.scrollWidth && productImages?.clientWidth)
-      setShowSomething(productImages?.scrollWidth >  productImages?.clientWidth)
-    }, 500)
-    
+      if (productImages?.scrollWidth && productImages?.clientWidth)
+        setShowSomething(
+          productImages?.scrollWidth > productImages?.clientWidth
+        );
+    }, 500);
   }, [product]);
-
 
   const { cartData, setCartData } = useContext(CartContext);
 
@@ -73,74 +73,79 @@ const Product = () => {
     });
   };
 
-  return Object.entries(product).map(([_, value]: any) => {
-    return (
-      <div className="product-container">
-        <div className="product-header">
-          <div className="product-info">
-            <div className="product-title">{value[1].name}</div>
-            <div className="product-category">
-              {<Breadcrumb categories={Object.values(value[1].category)} />}
+  return (
+    <>
+      {Object.entries(product).map(([_, value]: any) => {
+        return (
+          <div className="product-container">
+            <div className="product-header">
+              <div className="product-info">
+                <div className="product-title">{value[1].name}</div>
+                <div className="product-category">
+                  {<Breadcrumb categories={Object.values(value[1].category)} />}
+                </div>
+                <div className="product-description">
+                  {value[1].description}
+                </div>
+                <div className="product-price">$ {value[1].price}</div>
+                <select
+                  className="product-size"
+                  value={selectedSize}
+                  onChange={(e) => setSelectedSize(e.target.value)}
+                >
+                  <option value="null">Select Size</option>
+                  {Object.entries(value[1].sizeAvailable).map(
+                    ([key, value]: any) => {
+                      if (value >= 1) {
+                        return (
+                          <option key={key} value={key}>
+                            {key}: Available
+                          </option>
+                        );
+                      } else {
+                        return (
+                          <option value={key} disabled>
+                            {key}: Sold Out
+                          </option>
+                        );
+                      }
+                    }
+                  )}
+                </select>
+                <PrimaryButton text="Add to Cart" onClick={addToCart} />
+              </div>
             </div>
-            <div className="product-description">{value[1].description}</div>
-            <div className="product-price">$ {value[1].price}</div>
-            <select
-              className="product-size"
-              value={selectedSize}
-              onChange={(e) => setSelectedSize(e.target.value)}
-            >
-              <option value="null">Select Size</option>
-              {Object.entries(value[1].sizeAvailable).map(
-                ([key, value]: any) => {
-                  if (value >= 1) {
-                    return (
-                      <option key={key} value={key}>
-                        {key}: Available
-                      </option>
-                    );
-                  } else {
-                    return (
-                      <option value={key} disabled>
-                        {key}: Sold Out
-                      </option>
-                    );
-                  }
-                }
-              )}
-            </select>
-            <PrimaryButton text="Add to Cart" onClick={addToCart} />
+            <div className="product-body">
+              <div className="product-images" id="product-images">
+                {Object.entries(value[1].img).map(([key, value]: any) => {
+                  return <img src={value} alt={key} />;
+                })}
+              </div>
+              <div className="product-image-buttons">
+                {showSomething && (
+                  <>
+                    <div
+                      className="product-body-btn"
+                      onClick={() => scrollToLeftorRight("left")}
+                    >
+                      <MdOutlineNavigateBefore />
+                    </div>
+                    <div
+                      className="product-body-btn"
+                      onClick={() => scrollToLeftorRight("right")}
+                    >
+                      <MdOutlineNavigateNext />
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>
+            <div className="product-footer"></div>
           </div>
-        </div>
-        <div className="product-body">
-          <div className="product-images" id="product-images">
-            {Object.entries(value[1].img).map(([key, value]: any) => {
-              return <img src={value} alt={key} />;
-            })}
-          </div>
-          <div className="product-image-buttons">
-            {
-             showSomething && (
-              <>
-                <div
-                  className="product-body-btn"
-                  onClick={() => scrollToLeftorRight("left")}
-                >
-                  <MdOutlineNavigateBefore />
-                </div>
-                <div
-                  className="product-body-btn"
-                  onClick={() => scrollToLeftorRight("right")}
-                >
-                  <MdOutlineNavigateNext />
-                </div>
-              </>
-            )}
-          </div>
-        </div>
-        <div className="product-footer"></div>
-      </div>
-    );
-  });
+        );
+      })}
+    </>
+  );
 };
 
 export default Product;
