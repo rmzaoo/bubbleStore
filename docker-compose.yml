@@ -16,29 +16,27 @@ volumes:
    
 
 services:
-  # app-mockserver:
-  #   container_name: app-mockserver
-  #   build: 
-  #     context: "./mock"
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - 4512:4512
-  #   networks:
-  #     - app-mockserver-net
-  #   volumes:
-  #     - bubblestore-data:/mock
-  #   restart: always
+  app-mockserver:
+    container_name: app-mockserver
+    build: 
+      context: "./mock"
+      dockerfile: Dockerfile
+    ports:
+      - 4512:4512
+    networks:
+      - app-mockserver-net
+    volumes:
+      - bubblestore-data:/mock
+    restart: always
   app-bubblestore-frontend:
     container_name: app-bubblestore-frontend
     build: 
       context: "./frontend"
       dockerfile: Dockerfile
     ports:
-      - 8080:3000
+      - 80:80
     volumes:
       - bubblestore-data:/data
-    # depends_on:
-    #   - app-mockserver
     restart: always
     networks:
       - app-bubblestore-net
