@@ -11,8 +11,8 @@ networks:
     name: database-net
     driver: bridge
 
-volumes:
-  bubblestore-data:
+# volumes:
+#   bubblestore-data:
    
 
 services:
@@ -25,9 +25,9 @@ services:
       - 4512:4512
     networks:
       - app-mockserver-net
-    volumes:
-      - bubblestore-data:/mock
-    restart: always
+    # volumes:
+    #   - bubblestore-data:/mock
+    # restart: always
   app-bubblestore-frontend:
     container_name: app-bubblestore-frontend
     build: 
@@ -35,9 +35,20 @@ services:
       dockerfile: Dockerfile
     ports:
       - 80:80
-    volumes:
-      - bubblestore-data:/data
-    restart: always
+    # volumes:
+    #   - bubblestore-data:/data
+    # restart: always
     networks:
       - app-bubblestore-net
+  db_postgres:
+    container_name: db_postgres
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: bubble_store
+    ports:
+      - 5480:5432
+    networks:
+      - database-net
     

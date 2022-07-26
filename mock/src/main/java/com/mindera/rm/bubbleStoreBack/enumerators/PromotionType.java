@@ -12,7 +12,6 @@ import java.util.stream.Collectors;
 @Getter
 @AllArgsConstructor
 public enum PromotionType {
-    //    GET_X_FOR_Y(Arrays.asList("001", "002")),
     GET_50PERCENT_DISCONT(Arrays.asList("003", "011"), 1, new BigDecimal("0.5"), 0, 1),
     GET_30PERCENT_DISCONT(Arrays.asList("004", "002"), 1, new BigDecimal("0.5"), 0, 0);
 
