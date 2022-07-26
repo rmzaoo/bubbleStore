@@ -19,6 +19,7 @@ Bubble Store is a simple fashion store, this project is a exercise of Mindera Sc
 - [React](https://reactjs.org/) - React JS
 - [React Router v6](https://reactrouter.com/docs/en/v6/getting-started/overview) - React Router
 
+
 ## ✍️ Authors <a name = "authors"></a>
 
 - [@rmzaoo](https://github.com/rmzaoo) - a guy learning _"how to be a front end developer"_ :D
